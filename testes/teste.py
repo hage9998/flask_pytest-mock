@@ -1,5 +1,5 @@
 import pytest
-from service import create_app 
+from create_app import create_app 
 import app as application
 
 def test_mocking_constant_a(monkeypatch):
@@ -9,4 +9,3 @@ def test_mocking_constant_a(monkeypatch):
     response = app.post('/route')
     print(response)
     assert response.data.decode('utf-8') == word
-    # assert False
